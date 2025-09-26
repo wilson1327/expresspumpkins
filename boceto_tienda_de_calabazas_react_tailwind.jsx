@@ -268,4 +268,107 @@ INSTRUCCIONES (en el código):
 - Implementa /api/create-checkout-session en tu hosting (Vercel/Netlify/AWS) para integrar Stripe o PayPal.
 - Ten en cuenta: para pagos rápidos sin backend puedes usar botones de PayPal, o redirigir a una página de pago externa.
 */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pumpking Express - Pedido a domicilio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ff7518; /* Naranja calabaza 🎃 */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #e65c00;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 1rem;
+      background: #ff7518;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #e65c00;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pumpking Express 🎃</h1>
+    <p>Pedidos frescos y confiables hasta tu puerta 🚚</p>
+  </header>
+
+  <form action="https://formsubmit.co/TU_CORREO@gmail.com" method="POST">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Dirección:</label>
+    <input type="text" name="direccion" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Pedido:</label>
+    <textarea name="pedido" rows="4" required></textarea>
+
+    <button type="submit">Hacer Pedido ✅</button>
+  </form>
+
+  <footer>
+    <p>© 2025 Pumpking Express 🍂</p>
+  </footer>
+</body>
+</html>
+
 
